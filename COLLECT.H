@@ -105,7 +105,7 @@ strcpy(ch, store);
 
 /******************************/
 
-void strinst(const char* substr, char* ch, int x)
+void strinst(char* ch, const char* substr, int x)
 {
 
 char* store=(char*)malloc(strlen(ch)+strlen(substr)+1);
@@ -121,6 +121,16 @@ strcat(store, substr);
 strcat(store, p);
 
 strcpy(ch, store);
+
+}
+
+/******************************/
+
+void strreplace(char* ch, const char* substr, int x, int l)
+{
+
+strdel(ch, x, l);
+strinst(ch, substr, x);
 
 }
 
