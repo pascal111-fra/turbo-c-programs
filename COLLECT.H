@@ -135,3 +135,26 @@ strinst(ch, substr, x);
 }
 
 /******************************/
+
+char* strstring(int x, const char c)
+{
+
+char* store=(char*)malloc(x+1);
+int i;
+
+for(i=0; i<=x-1; ++i)
+store[i]=c;
+
+store[x]='\0';
+
+return store;
+}
+
+/******************************/
+
+char* strspace(int x)
+{
+
+return strstring(x, 32);
+
+}
