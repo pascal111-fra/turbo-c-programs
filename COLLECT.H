@@ -7,6 +7,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+
+
 void fgets2(char *s, size_t x)
 {
 
@@ -16,7 +18,9 @@ s[strcspn(s, "\n")]=0;
 
 }
 
-char* left(const char* ch, int x)
+/******************************/
+
+char* strleft(const char* ch, int x)
 {
 
 char* store=(char*) malloc(strlen(ch)+1);
@@ -29,7 +33,9 @@ return store;
 
 }
 
-char* right(const char* ch, int x)
+/******************************/
+
+char* strright(const char* ch, int x)
 {
 
 char* store=(char*) malloc(strlen(ch)+1);
@@ -46,7 +52,9 @@ return store;
 
 }
 
-char* mid(const char* ch, int x, int l)
+/******************************/
+
+char* strmid(const char* ch, int x, int l)
 {
 
 char* store=(char*) malloc(strlen(ch)+1);
@@ -62,6 +70,7 @@ return store;
 
 }
 
+/******************************/
 
 void swap(void** x, void** y)
 {
@@ -74,3 +83,24 @@ void** z;
 
 
 }
+
+/******************************/
+
+void strdel(char* ch, int x, int l)
+{
+
+char* store=(char*)malloc(strlen(ch)+1);
+int diff;
+
+store=strleft(ch, x-1);
+
+diff=strlen(ch)-(strlen(store));
+
+strcat(store, strmid(ch, x+l,diff));
+
+
+strcpy(ch, store);
+
+}
+
+/******************************/
