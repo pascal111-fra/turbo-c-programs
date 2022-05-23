@@ -1,3 +1,8 @@
+// Programmed under TC++ 3.0
+// Programmed by Mishary (Ahmed Crow)
+// DOS OS
+
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -16,10 +21,6 @@ char* left(const char* ch, int x)
 
 char* store=(char*) malloc(strlen(ch)+1);
 
-if((x>strlen(ch)) ||
-(x<1))
-exit(EXIT_FAILURE);
-
 strcpy(store, ch);
 
 store[x]='\0';
@@ -32,10 +33,6 @@ char* right(const char* ch, int x)
 {
 
 char* store=(char*) malloc(strlen(ch)+1);
-
-if((x>strlen(ch)) ||
-(x<1))
-exit(EXIT_FAILURE);
 
 strcpy(store, ch);
 
@@ -54,18 +51,6 @@ char* mid(const char* ch, int x, int l)
 
 char* store=(char*) malloc(strlen(ch)+1);
 int i;
-
-if((x>strlen(ch)) ||
-(x<1))
-exit(EXIT_FAILURE);
-
-if((l>strlen(ch)) ||
-(l<1))
-exit(EXIT_FAILURE);
-
-if(((x+l-1)-1)>
-(strlen(ch)-1))
-exit(EXIT_FAILURE);
 
 for(i=0; i<=l; ++i)
 store[i]=ch[i+x-1];
