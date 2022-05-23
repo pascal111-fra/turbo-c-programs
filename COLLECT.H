@@ -104,3 +104,24 @@ strcpy(ch, store);
 }
 
 /******************************/
+
+void strinst(const char* substr, char* ch, int x)
+{
+
+char* store=(char*)malloc(strlen(ch)+strlen(substr)+1);
+char* p=(char*)malloc(strlen(ch)+1);
+
+store=strleft(ch,x-1);
+
+strcpy(p, ch);
+strdel(p, 1, strlen(store));
+
+strcat(store, substr);
+
+strcat(store, p);
+
+strcpy(ch, store);
+
+}
+
+/******************************/
