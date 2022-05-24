@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 
 
 void fgets2(char *s, size_t x)
@@ -156,5 +156,26 @@ char* strspace(int x)
 {
 
 return strstring(x, 32);
+
+}
+
+/******************************/
+
+void strltrim(char* ch)
+{
+
+while(isspace(ch[0]))
+strdel(ch,1,1);
+
+}
+
+/******************************/
+
+void strrtrim(char* ch)
+{
+
+strrev(ch);
+strltrim(ch);
+strrev(ch);
 
 }
