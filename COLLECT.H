@@ -3,11 +3,11 @@
 // DOS OS
 
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
-
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<ctype.h>
+#include<math.h>
 
 void fgets2(char *s, size_t x)
 {
@@ -177,5 +177,33 @@ void strrtrim(char* ch)
 strrev(ch);
 strltrim(ch);
 strrev(ch);
+
+}
+
+/******************************/
+
+double fix(double x)
+{
+
+double y,* z;
+
+y=modf(x,z);
+y=*z;
+
+return y;
+
+}
+
+/******************************/
+
+int sgn(double x)
+{
+
+if(x<0)
+return -1;
+else{if(x>0)
+return 1;}
+
+return 0;
 
 }
