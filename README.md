@@ -10,3 +10,5 @@ printf("you like to do:\n\n");
 p6 ==> printf("Acey Ducey card game!\n\n");
 
 p7 ==> "for(ch='A'; ch<='Z'; ++ch)".
+
+trainin1: simple sum of two float numbers.
