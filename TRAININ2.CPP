@@ -46,9 +46,9 @@ exit(EXIT_FAILURE);}
 
 for(i=0; i<x; i++){
 printf("Enter a number: ");
-scanf("%f", &nums[x]);
+scanf("%f", &nums[i]);
 fflush(stdin);
-calc_nums+=nums[x];}
+calc_nums+=nums[i];}
 
 calc_nums/=x;
 
