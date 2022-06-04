@@ -14,3 +14,5 @@ p7 ==> "for(ch='A'; ch<='Z'; ++ch)".
 trainin1: simple sum of two float numbers.
 
 trainin2: calculating average of some given numbers.
+
+arales34: Pre-increment and Post-increment for "++" operator.
