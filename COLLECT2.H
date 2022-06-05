@@ -1,18 +1,19 @@
 #include<string.h>
 #include<stdlib.h>
 
-const char* strleft2(const char* ch, char* c)
+char* strleft2(const char* ch, char* c)
 {
 
-char* store=(char*)malloc(sizeof(char)*strlen(ch));
-int count=0;
+char* store=strdup(ch);
 
-while(ch<c){
-*store++=*ch++;
-++count;}
+int diff=0;
 
-*++store='\0';
-store-=count+1;
+diff=abs(ch-c);
+
+if(store==NULL)
+return NULL;
+
+store[diff+1]='\0';
 
 return store;
 }
