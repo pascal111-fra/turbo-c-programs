@@ -1,6 +1,9 @@
 #include<string.h>
 #include<stdlib.h>
 
+
+/******************************************/
+
 const char* strleft2(const char* ch, char* c)
 {
 
@@ -17,6 +20,8 @@ store[diff+1]='\0';
 
 return store;
 }
+
+/******************************************/
 
 const char* strright2(const char* ch, char* c)
 {
@@ -40,6 +45,8 @@ return store;
 
 }
 
+/******************************************/
+
 const char* strmid2(const char* ch, char* c, size_t i)
 {
 
@@ -53,6 +60,8 @@ store[i]='\0';
 return store;
 
 }
+
+/******************************************/
 
 const char* strmid22(const char* ch, char* c, char* z)
 {
@@ -71,6 +80,7 @@ return store;
 
 }
 
+/******************************************/
 
 void strcpy2(char* ch, const char* c, size_t i)
 {
@@ -85,6 +95,8 @@ strncpy(ch, c, strlen(c));
 ch[strlen(c)]='\0';}
 
 }
+
+/******************************************/
 
 void strcat2(char* ch, const char* c, size_t i)
 {
@@ -104,4 +116,28 @@ strncat(ch, c, strlen(c));
 ch[ch_len+strlen(c)]='\0';}
 
 
+}
+
+/******************************************/
+
+const char* strlwr2(const char* ch)
+{
+
+char* store=strdup(ch);
+
+strlwr(store);
+
+return store;
+}
+
+/******************************************/
+
+const char* strupr2(const char* ch)
+{
+
+char* store=strdup(ch);
+
+strupr(store);
+
+return store;
 }
