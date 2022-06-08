@@ -136,7 +136,7 @@ strinst(ch, substr, x);
 
 /******************************/
 
-char* strstring(int x, const char c)
+const char* strstring(int x, const char c)
 {
 
 char* store=(char*)malloc(x+1);
@@ -152,7 +152,7 @@ return store;
 
 /******************************/
 
-char* strspace(int x)
+const char* strspace(int x)
 {
 
 return strstring(x, 32);

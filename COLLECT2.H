@@ -85,8 +85,7 @@ return store;
 void strcpy2(char* ch, const char* c, size_t i)
 {
 
-if((strlen(c)>(i-1)) ||
-(strlen(c)==(i-1))){
+if(strlen(c)>=(i-1)){
 strncpy(ch, c, (i-1));
 ch[i-1]='\0';}
 
@@ -152,4 +151,56 @@ char* store=strdup(ch);
 strrev(store);
 
 return store;
+}
+
+/******************************************/
+
+const char* strdel2(const char* ch, char* c, char* z)
+{
+
+char* store1=(char*)strleft2(ch, (c-1));
+char* store2=(char*)strright2(ch, (z+1));
+char* store3=(char*)malloc(sizeof(char)*
+(strlen(store1)+strlen(store2)+1));
+int len=strlen(store1)+strlen(store2)+1;
+
+strcpy2(store3, store1, len);
+
+strcat2(store3, store2, len);
+
+return store3;
+
+}
+
+/******************************************/
+
+void strinst2(char* ch, const char* substr, char* c, size_t i)
+{
+
+char* store1=(char*)strleft2(ch, (c-1));
+char* store2=(char*)strright2(ch, c);
+char* store3=(char*)malloc(sizeof(char)*(strlen(ch)+
+strlen(substr)+1));
+int len=strlen(ch)+strlen(substr)+1;
+
+strcpy2(store3, store1, len);
+strcat2(store3, substr, len);
+strcat2(store3, store2, len);
+
+strcpy2(ch, store3, i);
+
+}
+
+/******************************************/
+
+void strreplace2(char* ch, const char* substr, char* c, char* z, size_t i)
+{
+
+char* store=(char*)malloc(i);
+
+strcpy2(store, strdel2(ch, c, z), i);
+strcpy2(ch, store, i);
+strinst2(ch, substr, c, i);
+
+
 }
