@@ -70,3 +70,38 @@ store[diff+1]='\0';
 return store;
 
 }
+
+
+void strcpy2(char* ch, const char* c, size_t i)
+{
+
+if((strlen(c)>(i-1)) ||
+(strlen(c)==(i-1))){
+strncpy(ch, c, (i-1));
+ch[i-1]='\0';}
+
+else{
+strncpy(ch, c, strlen(c));
+ch[strlen(c)]='\0';}
+
+}
+
+void strcat2(char* ch, const char* c, size_t i)
+{
+
+int diff=0, ch_len;
+
+diff=abs(strlen(ch)-(i-1));
+ch_len=strlen(ch);
+
+if(strlen(c)>diff ||
+strlen(c)==diff){
+strncat(ch, c, diff);
+ch[i-1]='\0';}
+
+else{
+strncat(ch, c, strlen(c));
+ch[ch_len+strlen(c)]='\0';}
+
+
+}
