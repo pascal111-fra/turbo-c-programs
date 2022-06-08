@@ -141,3 +141,15 @@ strupr(store);
 
 return store;
 }
+
+/******************************************/
+
+const char* strrev2(const char* ch)
+{
+
+char* store=strdup(ch);
+
+strrev(store);
+
+return store;
+}
