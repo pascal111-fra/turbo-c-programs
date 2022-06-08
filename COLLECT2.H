@@ -1,7 +1,7 @@
 #include<string.h>
 #include<stdlib.h>
 
-char* strleft2(const char* ch, char* c)
+const char* strleft2(const char* ch, char* c)
 {
 
 char* store=strdup(ch);
@@ -18,7 +18,7 @@ store[diff+1]='\0';
 return store;
 }
 
-char* strright2(const char* ch, char* c)
+const char* strright2(const char* ch, char* c)
 {
 
 char* store=strdup(ch);
@@ -40,10 +40,10 @@ return store;
 
 }
 
-char* strmid2(const char* ch, char* c, size_t i)
+const char* strmid2(const char* ch, char* c, size_t i)
 {
 
-char* store=strright2(ch,c);
+char* store=(char*)strright2(ch,c);
 
 if(store==NULL)
 return NULL;
@@ -54,10 +54,10 @@ return store;
 
 }
 
-char* strmid22(const char* ch, char* c, char* z)
+const char* strmid22(const char* ch, char* c, char* z)
 {
 
-char* store=strright2(ch,c);
+char* store=(char*)strright2(ch,c);
 int diff=0;
 
 if(store==NULL || c>z)
