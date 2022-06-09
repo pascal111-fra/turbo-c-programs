@@ -11,6 +11,8 @@ p6 ==> printf("Acey Ducey card game!\n\n");
 
 p7 ==> "for(ch='A'; ch<='Z'; ++ch)".
 
+p10 ==> dividing the 1st & 2nd name of the user.
+
 trainin1: simple sum of two float numbers.
 
 trainin2: calculating average of some given numbers.
