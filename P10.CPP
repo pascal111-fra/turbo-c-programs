@@ -5,7 +5,6 @@
 
 #include<stdio.h>
 #include<conio.h>
-#include"collect.h"
 #include"collect2.h"
 
 
@@ -22,7 +21,7 @@ printf("Enter your 1st & 2nd name: ");
 gets(your_name);
 fflush(stdin);
 
-strltrim(your_name);
+strltrim2(your_name);
 p=&your_name[0];
 while((*p)!=' ')
 p++;
@@ -35,12 +34,10 @@ printf("Your 1st name is: %s\n", first_name);
 strcpy2(second_name, strright2(your_name, p),
 sizeof(second_name));
 
-strltrim(second_name);
-strrtrim(second_name);
+strltrim2(second_name);
+strrtrim2(second_name);
 
 printf("Your 2nd name is: %s\n", second_name);
-
-
 
 getch();
 return 0;
