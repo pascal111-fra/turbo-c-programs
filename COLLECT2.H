@@ -111,6 +111,7 @@ free(temp);
 void strcat2(char* ch, const char* c, size_t i)
 {
 
+/*
 char* temp=strdup(c);
 int diff;
 
@@ -124,7 +125,19 @@ else{
 strncat(ch, temp, strlen(c));
 ch[strlen(ch)+strlen(c)]='\0';}
 
-free(temp);
+free(temp);*/
+
+int diff;
+
+diff=abs(strlen(ch)-i);
+--diff;
+
+if(strlen(c)<=diff)
+memmove(&ch[strlen(ch)], c, strlen(c)+1);
+
+else{
+memmove(&ch[strlen(ch)], c, diff);
+ch[i]='\0';}
 
 }
 
@@ -246,8 +259,7 @@ int i;
 while(isspace(ch[0])){
 
 for(i=0; i<=strlen(ch)-1; i++)
-ch[i]=ch[i+1];
-ch[i]='\0';}
+ch[i]=ch[i+1];}
 
 }
 
@@ -376,3 +388,6 @@ return 1;}
 return 0;
 
 }
+
+/******************************************/
+
